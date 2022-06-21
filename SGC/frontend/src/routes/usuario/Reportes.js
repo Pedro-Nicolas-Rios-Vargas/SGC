@@ -436,7 +436,8 @@ export const Reportes = () => {
                             <div className='cabeceraReportes'>
                                 {selReporte !== null ?
                                     <>
-                                        <h1 className='reportesUsuario'>{selReporte.Nombre_Reporte}</h1>
+                                        {console.log(selReporte)}
+                                        <h1 className='reportesUsuario'>{selReporte.Nombre_Reporte + "\t" + selReporte.Fecha_Entrega}</h1>
                                         <hr />
                                         <p className='reportesUsuario'>{selReporte.Descripcion}</p>
 
@@ -503,7 +504,7 @@ export const Reportes = () => {
                         </Modal>
                     </> :
                         <>
-                            
+
 
                             <div className='Sin_Resultados img'>
                                 <img src={"/static/media/kana-buscar.7a7b8c78c2c4aaec2dd5.png"} alt="Sin resultados" />
